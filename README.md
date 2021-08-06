@@ -1,4 +1,4 @@
-### Hi there 👋
+<img src="https://i.imgur.com/IB7gdBG.gif" alt="greeting" align="center"></img>
 
 <!--START_SECTION:waka-->
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue)
