@@ -23,3 +23,9 @@ jobs:
           # SHOW_LANGUAGE_PER_REPO: "False"
           # SHOW_LOC_CHART: "False"
           # SHOW_SHORT_INFO: "False"
+      - name: send custom message with args
+        uses: appleboy/telegram-action@master
+        with:
+         to: ${{ secrets.TELEGRAM_TO }}
+         token: ${{ secrets.TELEGRAM_TOKEN }}
+         args: The ${{ github.event_name }} event triggered first step.
