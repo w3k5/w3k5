@@ -23,12 +23,6 @@ jobs:
           # SHOW_LANGUAGE_PER_REPO: "False"
           # SHOW_LOC_CHART: "False"
           # SHOW_SHORT_INFO: "False"
-#       - uses: yanzay/notify-telegram@v0.1.0
-#         if: always()
-#         with:
-#          chat: ${{ secrets.TELEGRAM_TO }} # user id or channel name secret
-#          token: ${{ secrets.TELEGRAM_TOKEN }} # token secret
-#          status: ${{ job.status }} # do not modify this line
       - name: Telegram Notify Success
         uses: appleboy/telegram-action@master
         if: ${{ success() }}
@@ -37,12 +31,11 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ✅ Job has been done.
-            Run # ${{github.run_number}}
-            Developer: *${{github.actor}}*
-            Repository: ${{github.repository}}
-            Href: ${{ github.head_ref }}
-            Href: ${{ github.ref }}
-            Event: ${{ github.event_name }}
+            #️⃣ Run # ${{github.run_number}}
+            🧑‍💻 Developer: *${{github.actor}}*
+            📋 Repository: ${{github.repository}}
+            🔗 Href: ${{ github.ref }}
+            🎫 Event: ${{ github.event_name }}
           format: markdown
       - name: Telegram Notify Failure
         uses: appleboy/telegram-action@master
@@ -52,5 +45,9 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ❌ Job has been failed!
-            Developer: *${{github.actor}}*
+            #️⃣ Run # ${{github.run_number}}
+            🧑‍💻 Developer: *${{github.actor}}*
+            📋 Repository: ${{github.repository}}
+            🔗 Href: ${{ github.ref }}
+            🎫 Event: ${{ github.event_name }}
           format: markdown
