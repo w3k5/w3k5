@@ -30,7 +30,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ✅ Job has been done.
+            ✅ Job has been completed.
             #️⃣ Run # ${{github.run_number}}
             🧑‍💻 Developer: *${{github.actor}}*
             📋 Repository: ${{github.repository}}
