@@ -23,18 +23,7 @@ jobs:
           # SHOW_LANGUAGE_PER_REPO: "False"
           # SHOW_LOC_CHART: "False"
           # SHOW_SHORT_INFO: "False"
-      - name: send custom message with args
-        uses: appleboy/telegram-action@master
-        with:
-         to: ${{ secrets.TELEGRAM_TO }}
-         token: ${{ secrets.TELEGRAM_TOKEN }}
-         args: ACTION => ${{ github.event_name }} **REPO** => {{GITHUB_REPOSITORY}} `NAMESPACE` => {{GITHUB_ACTOR}}
-      - name: notification
-        uses: xinthink/action-telegram@v1.1
-        with:
-          botToken: ${{ secrets.TELEGRAM_TOKEN }}
-          chatId: ${{ secrets.TELEGRAM_TO }}
-          jobStatus: ${{ job.status }}
+      - name: Telegram Notify
       - uses: yanzay/notify-telegram@v0.1.0
         if: always()
         with:
