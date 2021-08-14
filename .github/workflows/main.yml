@@ -29,11 +29,23 @@ jobs:
 #          chat: ${{ secrets.TELEGRAM_TO }} # user id or channel name secret
 #          token: ${{ secrets.TELEGRAM_TOKEN }} # token secret
 #          status: ${{ job.status }} # do not modify this line
-      - name: Telegram Notify
+      - name: Telegram Notify Success
         uses: appleboy/telegram-action@master
+        if: ${{ success() }}
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            Status: ${{ job.status }}. Telegram Notify with *Markdown* ✅
+            ✅ Job has been done.
+            Developer: *${{github.actor}}*
+          format: markdown
+      - name: Telegram Notify Failure
+        uses: appleboy/telegram-action@master
+        if: ${{ failure() }}
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ❌ Job has been failed!
+            Developer: *${{github.actor}}*
           format: markdown
