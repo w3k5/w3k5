@@ -40,7 +40,7 @@ jobs:
             Run # ${{github.run_number}}
             Developer: *${{github.actor}}*
             Repository: ${{github.repository}}
-            Context: ${{ toJSON(github) }}
+            Href: ${{ github.base_ref }}
           format: markdown
       - name: Telegram Notify Failure
         uses: appleboy/telegram-action@master
