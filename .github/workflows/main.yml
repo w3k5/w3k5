@@ -37,8 +37,10 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ✅ Job has been done.
+            Run # ${{github.run_number}}
             Developer: *${{github.actor}}*
             Repository: ${{github.repository}}
+            Context: ${{ toJSON(github) }}
           format: markdown
       - name: Telegram Notify Failure
         uses: appleboy/telegram-action@master
