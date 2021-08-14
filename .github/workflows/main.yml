@@ -23,7 +23,6 @@ jobs:
           # SHOW_LANGUAGE_PER_REPO: "False"
           # SHOW_LOC_CHART: "False"
           # SHOW_SHORT_INFO: "False"
-      - name: Telegram Notify
       - uses: yanzay/notify-telegram@v0.1.0
         if: always()
         with:
