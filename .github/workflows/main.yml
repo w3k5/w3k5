@@ -38,6 +38,7 @@ jobs:
           message: |
             ✅ Job has been done.
             Developer: *${{github.actor}}*
+            Repository: ${{github.repository}}
           format: markdown
       - name: Telegram Notify Failure
         uses: appleboy/telegram-action@master
