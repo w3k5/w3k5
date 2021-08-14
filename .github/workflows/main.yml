@@ -30,12 +30,10 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ✅ Job has been completed.
-            #️⃣ Run # ${{github.run_number}}
+            ✅ *Job has been completed.*
+            #️⃣ Run # ${{github.run_number}} *${{ github.event_name }}* to *${{github.repository}}*
             🧑‍💻 Developer: *${{github.actor}}*
-            📋 Repository: ${{github.repository}}
-            🔗 Href: ${{ github.ref }}
-            🎫 Event: ${{ github.event_name }}
+            🔗 Href: https://github.com/${{ github.ref }}
           format: markdown
       - name: Telegram Notify Failure
         uses: appleboy/telegram-action@master
@@ -44,10 +42,8 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ❌ Job has been failed!
-            #️⃣ Run # ${{github.run_number}}
+            ❌ *Job has been failed!*
+            #️⃣ Run # ${{github.run_number}} *${{ github.event_name }}* to *${{github.repository}}*
             🧑‍💻 Developer: *${{github.actor}}*
-            📋 Repository: ${{github.repository}}
-            🔗 Href: ${{ github.ref }}
-            🎫 Event: ${{ github.event_name }}
+            🔗 Href: https://github.com/${{ github.ref }}
           format: markdown
