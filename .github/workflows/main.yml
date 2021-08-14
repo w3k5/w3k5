@@ -35,5 +35,5 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            Telegram Notify with **Markdown** ✔️
+            Status: ${{ job.status }}. Telegram Notify with *Markdown* ✅
           format: markdown
