@@ -4,7 +4,8 @@
 
 <!--START_SECTION:waka-->
 ```text
-No Activity tracked this Week
+Markdown     2 mins          ██████████████▒░░░░░░░░░░   57.02 % 
+Docker       1 min           ███████▒░░░░░░░░░░░░░░░░░   29.26 % 
 ```
 <!--END_SECTION:waka-->
 
