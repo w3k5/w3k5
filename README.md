@@ -3,13 +3,16 @@
 </div>
 
 <!--START_SECTION:waka-->
+
 ```text
-TypeScript                 3 hrs 38 mins   █████████████████░░░░░░░░   68.23 % 
-HTML                       35 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.99 % 
-JSON                       19 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.11 % 
-JavaScript                 13 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.35 % 
-Nginx configuration file   11 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.64 % 
+TypeScript                 6 hrs 21 mins   ████████████▒░░░░░░░░░░░░   49.30 %
+HTML                       3 hrs 5 mins    ██████░░░░░░░░░░░░░░░░░░░   23.98 %
+SCSS                       1 hr 59 mins    ████░░░░░░░░░░░░░░░░░░░░░   15.37 %
+JSON                       38 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   04.96 %
+JavaScript                 13 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.80 %
+Nginx configuration file   11 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.50 %
 ```
+
 <!--END_SECTION:waka-->
 
 <div id="header" align="center">
