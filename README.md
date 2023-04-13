@@ -1,6 +1,6 @@
-<div align="center">
+<!-- <div align="center">
  <img src="https://i.imgur.com/IB7gdBG.gif" alt="greeting" align="center"></img>
-</div>
+</div> -->
 
 <!--START_SECTION:waka-->
 
